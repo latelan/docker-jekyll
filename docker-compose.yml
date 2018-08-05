@@ -1,0 +1,12 @@
+version: '2'
+services:
+  blog:
+    container_name: jekyll      
+    image: latelan/jekyll:v2.0
+    restart: always
+    volumes:
+        - /PATH_TO_BLOG:/opt/blog
+    ports:
+        - 4000:4000
+    command: ['jekyll', 's', '-w', '-H', '0.0.0.0']
+    
